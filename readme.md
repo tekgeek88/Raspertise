@@ -19,7 +19,6 @@ Raspertise is a decentralized advertising platform allowing Raspberry Pi owners 
 * Advertisements: A message that the advertiser intends to be broadcast at a location.
 
 
-
 ## The latest version
 The current version of this program is written in .NET Core Version: 2.2.300
 and using the Entity Framework V4.
@@ -27,7 +26,8 @@ and using the Entity Framework V4.
 ## Installation
 Installation instructions coming soon<br>
 **To run the program type**
-  `:~ $ dotnet run` into your terminal.
+  `:~ $ dotnet run --urls http://0.0.0.0:5001` into your terminal.
+  * This allows you to connect to the pie via your local network
 
 
 ## Contacts
