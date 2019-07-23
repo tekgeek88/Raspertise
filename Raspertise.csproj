@@ -14,4 +14,13 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Views\Advertisement\Create.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Advertisement\Delete.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Advertisement\Details.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Advertisement\Edit.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Advertisement\Index.cshtml" />
+  </ItemGroup>
+
 </Project>
