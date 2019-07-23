@@ -59,7 +59,7 @@ namespace Raspertise.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,LocationId,SponsorId,Message,Color,DateStart,DateStop,TotalCost")] Advertisement advertisement)
+        public async Task<IActionResult> Create([Bind("Id,LocationId,SponsorId,Message,Color,Speed,DateStart,DateStop,TotalCost")] Advertisement advertisement)
         {
             if (ModelState.IsValid)
             {
@@ -95,7 +95,7 @@ namespace Raspertise.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,LocationId,SponsorId,Message,Color,DateStart,DateStop,TotalCost")] Advertisement advertisement)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,LocationId,SponsorId,Message,Color,Speed,DateStart,DateStop,TotalCost")] Advertisement advertisement)
         {
             if (id != advertisement.Id)
             {
