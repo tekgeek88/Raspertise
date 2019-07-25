@@ -45,10 +45,18 @@ and using the Entity Framework V4.
 ### 4. Run Web App from .NET CLI.
 
 * To access the website on a Rasperry Pi from your local network start the web app using
+
+  * `:~$ cd Dev/Dotnet/Raspertise`
   
   * `:~$ dotnet run --urls http://0.0.0.0:5001`
 
   * This allows you to access the webapp using your Raspbery Pi's IP address on your local network.
+
+### 5. Run Python script to scroll advertisments.
+
+* `:~$ cd Dev/DotNet/Raspertise-Pi/rpi-rgb-led-matrix/bindings/python/samples/`
+
+* `:~$ sudo python runtext.py`
 
 ## Contact
 
