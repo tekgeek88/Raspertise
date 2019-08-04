@@ -17,7 +17,10 @@ $("#sliderSpeed").on("input", function () {
 });
 
 function setSliderValue(slider, value) {
+    console.log("fuck");
+    console.log(slider);
+    console.log(value);
     $(slider).prop("value", value);
-    $(slider).next("label").html(value);
+    $("#numSpeed").html(value);
 }
 
