@@ -17,6 +17,7 @@ namespace Raspertise.Data {
         public DbSet<Advertisement> Advertisements { get; set; }
         public DbSet<Sponsor> Sponsors { get; set; }
         public DbSet<Advertiser> Advertisers { get; set; }
+        public DbSet<SponsorAdvertisement> SponsorAdvertisements { get; set; }
 
         /***
          * This method overrides the table names in the database so they can be singular instead of plural
@@ -26,6 +27,10 @@ namespace Raspertise.Data {
             modelBuilder.Entity<Advertisement>().ToTable("Advertisement");
             modelBuilder.Entity<Sponsor>().ToTable("Sponsor");
             modelBuilder.Entity<Advertiser>().ToTable("Advertiser");
+            modelBuilder.Entity<SponsorAdvertisement>().ToTable("SponsorAdvertisement");
+            
+            modelBuilder.Entity<SponsorAdvertisement>()
+                .HasKey(a => new { a.AdvertisementId, a.SponsorId });
         }
 
     }

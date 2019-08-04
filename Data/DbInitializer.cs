@@ -34,14 +34,14 @@ namespace Raspertise.Data {
              *           Add Advertiser Sample Data
              *************************************************/
             // Look for any Advertisers
-            if (context.Advertisers.Any()) {
-                return; // DB has already been seeded with data
-            }
+//            if (context.Advertisers.Any()) {
+//                return; // DB has already been seeded with data
+//            }
 
             var advertisers = new Advertiser[] {
-                new Advertiser{FirstName = "Luke", LastName = "Gilmore", Email = "luke@gmail.com", Phone = "253-565-1234", AmountEarned = 0},
-                new Advertiser{FirstName = "Jason", LastName = "T-Mobile", Email = "jason@tmobile.com", Phone = "253-555-1111", AmountEarned = 0},
-                new Advertiser{FirstName = "Andy", LastName = "Kim", Email = "hush.mail@gmail.com", Phone = "253-111-2222", AmountEarned = 0}
+                new Advertiser{FirstName = "Luke", LastName = "Gilmore", Email = "luke@gmail.com", Phone = "253-565-1234", AmountEarned = 56.99m},
+                new Advertiser{FirstName = "Jason", LastName = "T-Mobile", Email = "jason@tmobile.com", Phone = "253-555-1111", AmountEarned = 27.99m},
+                new Advertiser{FirstName = "Andy", LastName = "Kim", Email = "hush.mail@gmail.com", Phone = "253-111-2222", AmountEarned = 1.00m}
             };
 
             foreach (Advertiser a in advertisers) {
@@ -54,15 +54,15 @@ namespace Raspertise.Data {
              *           Add Location Sample Data
              *************************************************/
             // Look for any Advertisers
-            if (context.Locations.Any()) {
-                return; // DB has already been seeded with data
-            }
+//            if (context.Locations.Any()) {
+//                return; // DB has already been seeded with data
+//            }
 
             var locations = new Location[] {
                 new Location{AdvertiserId = 1, Description = "My Uber - Passenger Side", PricePerDay = 1.00m},
                 new Location{AdvertiserId = 2, Description = "Voodoo Donut Shop", PricePerDay = 2.99m},
                 new Location{AdvertiserId = 3, Description = "12th and broadway", PricePerDay = 5.99m},
-                new Location{AdvertiserId = 1, Description = "My Uber - Passenger Side", PricePerDay = 1.75m}
+                new Location{AdvertiserId = 1, Description = "Living Room Window", PricePerDay = 1.75m}
             };
 
             foreach (Location l in locations) {
@@ -75,32 +75,40 @@ namespace Raspertise.Data {
              *           Add Advertisement Sample Data
              *************************************************/
             // Look for any Advertisements
-            if (context.Advertisements.Any()) {
-                return; // DB has already been seeded with data
-            }
+//            if (context.Advertisements.Any()) {
+//                return; // DB has already been seeded with data
+//            }
 
             var advertisements = new Advertisement[] {
                 new Advertisement{LocationId = 1, SponsorId = 1,
                     Message = "Enrique's Landscaping Service - 50% of this week! Call 253-639-1234 for a free quote today!", 
-                    Color = "255, 0, 0",
+                    Color = "#ff0000",
                     Speed = 5,
-                    DateStart = DateTime.Parse("07-15-2019"), 
-                    DateStop = DateTime.Parse("07-22-2019"), 
+                    DateStart = DateTime.Parse("2019-07-15"), 
+                    DateStop = DateTime.Parse("2019-07-22"), 
                     TotalCost = 100m},
                 new Advertisement{LocationId = 1, SponsorId = 2,
                     Message = "Sara's Shear Beauty and Hair Care - Free scalp massage with haircut! Call 253-555-1234 to make an appt today!", 
-                    Color = "0, 0, 255",
+                    Color = "#00ff00",
                     Speed = 2,
-                    DateStart = DateTime.Parse("07-15-2019"), 
-                    DateStop = DateTime.Parse("08-15-2019"), 
+                    DateStart = DateTime.Parse("2019-07-15"), 
+                    DateStop = DateTime.Parse("2019-08-15"), 
                     TotalCost = 200m},
                 new Advertisement{LocationId = 1, SponsorId = 3,
                     Message = "Coco's Pet Day Care - Free dog wash for stays of 2 nights or more! Call 253-555-1234 to make a reservation today!", 
-                    Color = "0, 255, 0", 
+                    Color = "#0000ff", 
                     Speed = 3, 
-                    DateStart = DateTime.Parse("07-15-2019"), 
-                    DateStop = DateTime.Parse("09-1-2019"), 
-                    TotalCost = 200m}
+                    DateStart = DateTime.Parse("2019-07-15"), 
+                    DateStop = DateTime.Parse("2019-09-01"), 
+                    TotalCost = 200m},
+                new Advertisement{LocationId = 1, SponsorId = 3,
+                    Message = "Ice Cold Beer - Half Price on Thirsty Thursdays", 
+                    Color = "#ff0000", 
+                    Speed = 4, 
+                    DateStart = DateTime.Parse("2019-07-21"), 
+                    DateStop = DateTime.Parse("2019-09-24"), 
+                    TotalCost = 700m}
+                
             };
 
             foreach (Advertisement a in advertisements) {

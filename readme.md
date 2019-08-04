@@ -61,3 +61,9 @@ and using the Entity Framework V4.
 ## Contact
 
 If you have any comments or suggestions please feel free to leave them for us on GitHub
+
+# Design
+
+## Color pallet
+
+  * https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=C51A4A&secondary.color=6CC04A
