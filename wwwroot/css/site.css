@@ -79,3 +79,7 @@ body {
 .table-dark.table-striped-2 tbody tr:nth-of-type(4n + 1), tr:nth-child(4n + 2) {
     background-color: rgba(255, 255, 255, 0.05);
 }
+
+.bg-primary {
+    background-color: #6CC04A !important;
+}

@@ -34,9 +34,9 @@ namespace Raspertise.Data {
              *           Add Advertiser Sample Data
              *************************************************/
             // Look for any Advertisers
-//            if (context.Advertisers.Any()) {
-//                return; // DB has already been seeded with data
-//            }
+            if (context.Advertisers.Any()) {
+                return; // DB has already been seeded with data
+            }
 
             var advertisers = new Advertiser[] {
                 new Advertiser{FirstName = "Luke", LastName = "Gilmore", Email = "luke@gmail.com", Phone = "253-565-1234", AmountEarned = 56.99m},

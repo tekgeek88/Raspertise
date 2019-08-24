@@ -1,0 +1,95 @@
+@model Raspertise.Models.RegisterModel
+
+
+<div class="container h-100 col-md-8">
+    <div class="row align-items-center p-5">
+        <div class="col-10 mx-auto">
+            <div class="card bg-dark rounded w-100">
+                <div class="card-title w-100 bg-primary p-2">
+                    <h4>Register Sponsor</h4>
+                </div>
+                <div class="card-body align-items-center">
+                    <form asp-action="RegisterSponsor" method="post" class="d-inline-block w-100">
+                        <div class="form-group row align-items-center">
+                            <div class="col-12">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fa fa-user-circle-o"></i>
+                                        </div>
+                                    </div>
+                                    <input asp-for="FirstName" type="text" class="form-control" placeholder="First name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-12">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fa fa-user-circle-o"></i>
+                                        </div>
+                                    </div>
+                                    <input asp-for="LastName" type="text" class="form-control" placeholder="Last name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-12">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fa fa-paper-plane"></i>
+                                        </div>
+                                    </div>
+                                    <input asp-for="Email" type="email" class="form-control" placeholder="Email address">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-12">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fa fa-phone"></i>
+                                        </div>
+                                    </div>
+                                    <input asp-for="Phone" type="text" class="form-control" placeholder="Phone number">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-12">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fa fa-key"></i>
+                                        </div>
+                                    </div>
+                                    <input asp-for="Password" type="password" class="form-control" placeholder="Password">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-12">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fa fa-key"></i>
+                                        </div>
+                                    </div>
+                                    <input asp-for="PasswordConfirm" name="" type="password" class="form-control" placeholder="Password confrim">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-8">
+                                <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

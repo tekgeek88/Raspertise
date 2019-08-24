@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Raspertise.Areas.Identity.Data;
 using Raspertise.Data;
 
 namespace Raspertise {
@@ -49,16 +50,23 @@ namespace Raspertise {
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
-            app.UseStaticFiles();
-            app.UseCookiePolicy();
             app.UseStatusCodePages();
-
+            app.UseDeveloperExceptionPage();
+            app.UseStaticFiles();
+            app.UseHttpsRedirection();
+            app.UseCookiePolicy();
+            app.UseAuthentication();
             app.UseMvc(routes => {
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+            
+            RaspertiseIdentityDbContext.CreateAdminAccount(app.ApplicationServices,
+                Configuration).Wait();
+            
+            
+            RaspertiseIdentityDbContext.CreateRoles(app.ApplicationServices).Wait();
         }
 
     }

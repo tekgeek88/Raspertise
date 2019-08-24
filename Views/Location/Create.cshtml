@@ -4,36 +4,47 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<div class="bg-primary m-1 p-1 text-white">
+    <h1>Create new location</h1>
+</div>
+<hr/>
 
-<h4>Location</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="AdvertiserId" class="control-label"></label>
-                <select asp-for="AdvertiserId" class ="form-control" asp-items="ViewBag.AdvertiserId"></select>
+<div class="container h-100">
+    <div class="row align-items-center p-5">
+        <div class="col-6 mx-auto">
+
+            <div class="card bg-dark rounded">
+                <div class="card-title w-100">
+                    <div class="bg-primary text-white w-100 p-2">
+                        <h4 class="text-light">Location</h4>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="AdvertiserId" class="control-label text-light"></label>
+                            <select asp-for="AdvertiserId" class="form-control" asp-items="ViewBag.AdvertiserId"></select>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Description" class="control-label text-light"></label>
+                            <input asp-for="Description" class="form-control"/>
+                            <span asp-validation-for="Description" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="PricePerDay" class="control-label text-light"></label>
+                            <input asp-for="PricePerDay" class="form-control"/>
+                            <span asp-validation-for="PricePerDay" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Create" class="btn btn-primary"/>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
-                <span asp-validation-for="Description" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PricePerDay" class="control-label"></label>
-                <input asp-for="PricePerDay" class="form-control" />
-                <span asp-validation-for="PricePerDay" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
     </div>
 </div>
-
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
-

@@ -24,4 +24,9 @@
     <_ContentIncludedByDefault Remove="Views\Advertisement\Index.cshtml" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <Folder Include="Areas\Identity\Models" />
+  </ItemGroup>
+
 </Project>

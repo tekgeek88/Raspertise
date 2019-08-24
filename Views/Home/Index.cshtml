@@ -2,24 +2,24 @@
     ViewData["Title"] = "Home Page";
 }
 <div class="container">
-    <div class="jumbotron">
-        <h1 class="display-6">Welcome to Raspertise</h1>
-        <p>A decentralized advertising platform allowing Raspberry Pi owners to display advertisements and get paid for it.</p>
+    <div class="jumbotron small bg-dark">
+        <h1 class="display-6 text-light">Welcome to Raspertise</h1>
+        <p class="text-light">A decentralized advertising platform allowing Raspberry Pi owners to display advertisements and get paid for it.</p>
     </div>
 
     <div class="container">
       <div class="card-columns d-flex justify-content-center">
-        <div class="card mx-3 py-3">
-          <div class="card-block text-center">
-            <h4 class="card-title">I am an advertiser</h4>
-            <p class="card-text">I have a location to broadcast messages</p>
-            <button class="btn btn-primary">Sell my spot!</button>
+        <div class="card mx-3 py-3 bg-dark">
+          <div class="card-block text-center  text-light">
+            <h4 class="card-title text-light">I am an advertiser</h4>
+            <p class="card-text text-light">I have a location to broadcast messages</p>
+            <button class="btn btn-primary" asp-controller="Account" asp-action="RegisterSponsor"  >Sell my spot!</button>
           </div>
         </div>
-        <div class="card mx-3 py-3">
+        <div class="card mx-3 py-3 bg-dark">
           <div class="card-block text-center">
-            <h4 class="card-title text-center">I am a sponsor</h4>
-            <p class="card-text">I have a message I would like to send.</p>
+            <h4 class="card-title text-center text-light">I am a sponsor</h4>
+            <p class="card-text text-light">I have a message I would like to send.</p>
             <button class="btn btn-primary">Advertise!</button>
           </div>
         </div>

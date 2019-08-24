@@ -6,17 +6,17 @@ namespace Raspertise.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AddColumn<string>(
-                name: "Speed",
-                table: "Advertisement",
-                nullable: true);
+//            migrationBuilder.AddColumn<string>(
+//                name: "Speed",
+//                table: "Advertisement",
+//                nullable: true);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropColumn(
-                name: "Speed",
-                table: "Advertisement");
+//            migrationBuilder.DropColumn(
+//                name: "Speed",
+//                table: "Advertisement");
         }
     }
 }
