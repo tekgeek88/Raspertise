@@ -26,7 +26,7 @@ namespace Raspertise {
 
                 try {
                     var context = services.GetRequiredService<RaspertiseContext>();
-                    DbInitialize.Initialize(context);
+//                    DbInitialize.Initialize(context);
                 }
                 catch (Exception e) {
                     var logger = services.GetRequiredService<ILogger<Program>>();

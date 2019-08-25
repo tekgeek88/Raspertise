@@ -62,11 +62,11 @@ namespace Raspertise {
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
             
-            RaspertiseIdentityDbContext.CreateAdminAccount(app.ApplicationServices,
-                Configuration).Wait();
+//            RaspertiseIdentityDbContext.CreateAdminAccount(app.ApplicationServices,
+//                Configuration).Wait();
             
             
-            RaspertiseIdentityDbContext.CreateRoles(app.ApplicationServices).Wait();
+//            RaspertiseIdentityDbContext.CreateRoles(app.ApplicationServices).Wait();
         }
 
     }

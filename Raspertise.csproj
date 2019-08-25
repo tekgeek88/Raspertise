@@ -29,4 +29,9 @@
     <Folder Include="Areas\Identity\Models" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <Content Include="Views\Views\.DS_Store" />
+  </ItemGroup>
+
 </Project>

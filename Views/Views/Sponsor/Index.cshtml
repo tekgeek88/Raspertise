@@ -1,16 +1,15 @@
-@model IEnumerable<Raspertise.Models.Advertiser>
+@model IEnumerable<Raspertise.Models.Sponsor>
 
 @{
     ViewData["Title"] = "Index";
 }
 
 <div class="bg-primary m-1 p-1 text-white">
-    <h4>Advertiser Accounts</h4>
+    <h4 class="text-light">Sponsor Accounts</h4>
 </div>
-
 <div class="container">
     <div class="row justify-content-md-center bg-dark m-auto">
-        <table class="table table-dark table-striped-2 table-bordered table-responsive w-auto">
+        <table class="table table-dark table-striped-2 table-responsive w-auto">
             <thead>
             <tr>
                 <th>
@@ -26,11 +25,11 @@
                     @Html.DisplayNameFor(model => model.Phone)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.AmountEarned)
+                    @Html.DisplayNameFor(model => model.PaymentMethod)
                 </th>
             </tr>
             </thead>
-            <tbody>
+            @* <tbody> *@
             @foreach (var item in Model) {
                 <tr>
                     <td>
@@ -46,7 +45,7 @@
                         @Html.DisplayFor(modelItem => item.Phone)
                     </td>
                     <td>
-                        @Html.DisplayFor(modelItem => item.AmountEarned)
+                        @Html.DisplayFor(modelItem => item.PaymentMethod)
                     </td>
                     <tr>
                         <td colspan="5">
@@ -57,11 +56,10 @@
                     </tr>
                 </tr>
             }
-            </tbody>
+            @* </tbody> *@
         </table>
     </div>
 </div>
-
 <div class="container p-2">
-    <a class="btn btn-primary" asp-action="Create">Create New</a>
+<a class="btn btn-primary" asp-action="Create">Create</a>
 </div>
